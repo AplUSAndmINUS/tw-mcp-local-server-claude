@@ -6,8 +6,10 @@ Provides a flexible plugin architecture for extending server functionality.
 """
 
 import importlib
+import importlib.util
 import inspect
 import logging
+import sys
 from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Type, Callable
@@ -86,7 +88,7 @@ class PluginRegistry:
     
     async def _load_plugin_file(self, plugin_file: Path) -> None:
         """Load a single plugin file."""
-        module_name = plugin_file.stem
+        module_name = f"mcp_server.plugins.{plugin_file.stem}"
         spec = importlib.util.spec_from_file_location(module_name, plugin_file)
         
         if spec is None or spec.loader is None:
@@ -94,6 +96,8 @@ class PluginRegistry:
             return
         
         module = importlib.util.module_from_spec(spec)
+        module.__package__ = "mcp_server.plugins"
+        sys.modules[module_name] = module
         spec.loader.exec_module(module)
         
         # Find plugin classes
