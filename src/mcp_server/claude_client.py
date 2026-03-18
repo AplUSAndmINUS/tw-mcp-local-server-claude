@@ -82,10 +82,12 @@ class ClaudeClient:
             messages.append({"role": "user", "content": prompt})
             
             # Prepare API parameters
+            _max_tokens = kwargs.get("max_tokens")
+            _temperature = kwargs.get("temperature")
             api_params = {
                 "model": self.model,
-                "max_tokens": kwargs.get("max_tokens", self.max_tokens),
-                "temperature": kwargs.get("temperature", self.temperature),
+                "max_tokens": _max_tokens if _max_tokens is not None else self.max_tokens,
+                "temperature": _temperature if _temperature is not None else self.temperature,
                 "messages": messages,
             }
             
@@ -178,10 +180,12 @@ class ClaudeClient:
             ClaudeResponse object
         """
         try:
+            _max_tokens = kwargs.get("max_tokens")
+            _temperature = kwargs.get("temperature")
             api_params = {
                 "model": self.model,
-                "max_tokens": kwargs.get("max_tokens", self.max_tokens),
-                "temperature": kwargs.get("temperature", self.temperature),
+                "max_tokens": _max_tokens if _max_tokens is not None else self.max_tokens,
+                "temperature": _temperature if _temperature is not None else self.temperature,
                 "messages": messages,
             }
             
