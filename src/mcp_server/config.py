@@ -214,7 +214,7 @@ LOG_LEVEL=INFO
 # LOG_FILE=mcp_server.log
 
 # CORS Configuration
-CORS_ORIGINS=["http://localhost:3000", "http://localhost:8080"]
+CORS_ORIGINS=["http://localhost:3000", "http://localhost:8080", "http://localhost:8000"]
 
 # Rate Limiting
 RATE_LIMIT_REQUESTS=100
