@@ -5,12 +5,13 @@ Plugin System for MCP Server
 Provides a flexible plugin architecture for extending server functionality.
 """
 
-import importlib
+import importlib.util
 import inspect
 import logging
+import sys
 from abc import ABC, abstractmethod
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Type, Callable
+from typing import Any, Dict, List, Optional, Callable
 
 from pydantic import BaseModel
 
@@ -86,15 +87,35 @@ class PluginRegistry:
     
     async def _load_plugin_file(self, plugin_file: Path) -> None:
         """Load a single plugin file."""
-        module_name = plugin_file.stem
+        module_name = f"{__name__}.{plugin_file.stem}"
         spec = importlib.util.spec_from_file_location(module_name, plugin_file)
         
         if spec is None or spec.loader is None:
             logger.error(f"Could not load plugin spec for {plugin_file}")
             return
         
+        # Register the module in sys.modules before execution to support
+        # relative imports within the plugin,
+        prev_module = sys.modules.get(module_name)
         module = importlib.util.module_from_spec(spec)
+        module.__package__ = __name__
+        sys.modules[module_name] = module
         spec.loader.exec_module(module)
+        
+        # Register module in sys.modules before execution for relative imports,
+        # but avoid clobbering an existing entry and clean up on failure.
+        if prev_module is not None:
+            sys.modules[module_name] = prev_module
+        try:
+            spec.loader.exec_module(module)
+        except Exception as e:
+            # Restore or remove sys.modules entry on failure to avoid leaving
+            # a partially-initialized module in sys.modules that's registered under the plugin name.
+            if prev_module is None:
+                sys.modules.pop(module_name, None)
+            else:
+                sys.modules[module_name] = prev_module
+            raise e
         
         # Find plugin classes
         for name, obj in inspect.getmembers(module):
