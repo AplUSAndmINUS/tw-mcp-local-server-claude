@@ -6,68 +6,68 @@ A comprehensive Python MCP (Model Context Protocol) server implementation with C
 
 ### 🔥 Hybrid Cloud Architecture
 
--   **Local-First Computing**: Intelligent resource management prioritizing local execution
--   **Azure Cloud Integration**: Seamless fallback to Azure Functions for demanding tasks
--   **Windows Desktop Optimization**: Tailored for high-performance Windows workstations
--   **Resource-Aware Decisions**: Real-time monitoring and intelligent task placement
+- **Local-First Computing**: Intelligent resource management prioritizing local execution
+- **Azure Cloud Integration**: Seamless fallback to Azure Functions for demanding tasks
+- **Windows Desktop Optimization**: Tailored for high-performance Windows workstations
+- **Resource-Aware Decisions**: Real-time monitoring and intelligent task placement
 
 ### 🧠 Empathetic AI Assistance
 
--   **Vibe Coding**: Thoughtful, empathetic programming companion
--   **Deep Reasoning**: Comprehensive explanations with clear "why" behind recommendations
--   **Supportive Guidance**: Encouraging, patient assistance that builds confidence
--   **Emotional Intelligence**: Recognizes and responds to user emotional states
+- **Vibe Coding**: Thoughtful, empathetic programming companion
+- **Deep Reasoning**: Comprehensive explanations with clear "why" behind recommendations
+- **Supportive Guidance**: Encouraging, patient assistance that builds confidence
+- **Emotional Intelligence**: Recognizes and responds to user emotional states
 
 ### 🎯 Comprehensive MCP Modules
 
 #### 🧠 Ideation & Thoughtcraft
 
--   **Brainstorm**: Empathetic idea generation triggered by intent or mood
--   **Mindmap**: Recursive concept branching with visual mapping and clarity
--   **Perspective Shift**: Reframes questions and challenges defaults with support
--   **Creativity Surge**: Breaks creative gridlock through divergent thinking
+- **Brainstorm**: Empathetic idea generation triggered by intent or mood
+- **Mindmap**: Recursive concept branching with visual mapping and clarity
+- **Perspective Shift**: Reframes questions and challenges defaults with support
+- **Creativity Surge**: Breaks creative gridlock through divergent thinking
 
 #### 🎨 Visual & Image Generation
 
--   **Image Seed**: Thematic visual output generation
--   **Palette Gen**: Emotion and brand-driven color schemes
--   **Render Style**: Diverse rendering techniques (photo, sketch, surreal)
--   **Sketch Flow**: Draft-level visual sequences from minimal input
+- **Image Seed**: Thematic visual output generation
+- **Palette Gen**: Emotion and brand-driven color schemes
+- **Render Style**: Diverse rendering techniques (photo, sketch, surreal)
+- **Sketch Flow**: Draft-level visual sequences from minimal input
 
 #### 🎬 Animation & Motion Design
 
--   **Motion Branding**: Logo and tagline animation synchronized with brand energy
--   **Vibe Fade**: Emotion-driven transitions for ambient visual experiences
--   **Loop Craft**: Seamless looping animation generation
--   **Tempo Sync**: Animation synchronized with ambient inputs (music, voice)
+- **Motion Branding**: Logo and tagline animation synchronized with brand energy
+- **Vibe Fade**: Emotion-driven transitions for ambient visual experiences
+- **Loop Craft**: Seamless looping animation generation
+- **Tempo Sync**: Animation synchronized with ambient inputs (music, voice)
 
 #### 🧪 Model Interaction & Testing
 
--   **LLM Dictation**: Voice-to-model transcription and dictation workflows
--   **API Testbed**: Local sandbox for testing and validating API behavior
--   **Query Refine**: Prompt language tuning for optimal clarity and results
--   **Agent Weave**: Multi-agent workflow orchestration with coordinated logic
+- **LLM Dictation**: Voice-to-model transcription and dictation workflows
+- **API Testbed**: Local sandbox for testing and validating API behavior
+- **Query Refine**: Prompt language tuning for optimal clarity and results
+- **Agent Weave**: Multi-agent workflow orchestration with coordinated logic
 
 #### ✍️ Writing & Composition
 
--   **Writing Muse**: Storylines, brand copy, and essays from seed concepts
--   **Composition Sculpt**: Form, tone, and flow control for writing tasks
--   **Edit Pass**: Text rewriting and polishing with stylistic presets
--   **Persona Writer**: Character-based writing voice emulation
+- **Writing Muse**: Storylines, brand copy, and essays from seed concepts
+- **Composition Sculpt**: Form, tone, and flow control for writing tasks
+- **Edit Pass**: Text rewriting and polishing with stylistic presets
+- **Persona Writer**: Character-based writing voice emulation
 
 #### 🎧 Music & Audio Development
 
--   **Tone Builder**: Melodic ideas tied to brand emotion and scene context
--   **Beat Vibe**: Loop creation synchronized with animations and triggers
--   **Soundscape**: Multi-layered ambient audio design generation
--   **Voiceflow**: Vocal input/output processing and styling
+- **Tone Builder**: Melodic ideas tied to brand emotion and scene context
+- **Beat Vibe**: Loop creation synchronized with animations and triggers
+- **Soundscape**: Multi-layered ambient audio design generation
+- **Voiceflow**: Vocal input/output processing and styling
 
 #### 🗣️ Voice Recognition & Interaction
 
--   **Voice Capture**: Contextual voice capture with intelligent labeling
--   **Intent Echo**: Tone and emotion analysis embedded in speech
--   **Speech Craft**: Natural spoken response generation
--   **Command Stream**: Voice-activated MCP task execution
+- **Voice Capture**: Contextual voice capture with intelligent labeling
+- **Intent Echo**: Tone and emotion analysis embedded in speech
+- **Speech Craft**: Natural spoken response generation
+- **Command Stream**: Voice-activated MCP task execution
 
 ## 🏗️ Architecture
 
@@ -101,10 +101,10 @@ A comprehensive Python MCP (Model Context Protocol) server implementation with C
 
 ### Resource Management Strategy
 
--   **Local Execution Criteria**: CPU < 80%, Memory < 85%, Task duration < 5 min
--   **Azure Fallback Triggers**: Resource constraints, long-running tasks, specialized AI services
--   **Cost Optimization**: Minimize cloud costs while maintaining performance guarantees
--   **Windows-Specific**: GPU prioritization, service integration, desktop optimization
+- **Local Execution Criteria**: CPU < 80%, Memory < 85%, Task duration < 5 min
+- **Azure Fallback Triggers**: Resource constraints, long-running tasks, specialized AI services
+- **Cost Optimization**: Minimize cloud costs while maintaining performance guarantees
+- **Windows-Specific**: GPU prioritization, service integration, desktop optimization
 
 ## 🚀 Quick Start
 
@@ -112,67 +112,62 @@ A comprehensive Python MCP (Model Context Protocol) server implementation with C
 
 #### Minimum System Requirements
 
--   **CPU**: Modern x64 processor (Intel Core i5-8400 or AMD Ryzen 5 2600 equivalent)
--   **RAM**: 16GB DDR4
--   **Storage**: 256GB SSD (100GB free space minimum)
--   **GPU**: Integrated graphics (dedicated GPU recommended)
--   **Network**: Broadband internet connection
--   **OS**: Windows 10 Pro (version 1903 or later) or Linux (Ubuntu 20.04 LTS+, CentOS 8+, or equivalent)
+- **CPU**: Modern x64 processor (Intel Core i5-8400 or AMD Ryzen 5 2600 equivalent)
+- **RAM**: 16GB DDR4
+- **Storage**: 256GB SSD (100GB free space minimum)
+- **GPU**: Integrated graphics (dedicated GPU recommended)
+- **Network**: Broadband internet connection
+- **OS**: Windows 10 Pro (version 1903 or later) or Linux (Ubuntu 20.04 LTS+, CentOS 8+, or equivalent)
 
 #### Recommended Windows Desktop Configuration
 
--   **CPU**: AMD Ryzen 7 5800X+, Intel Core i7-12700K+, or Snapdragon X Elite (ARM64)
--   **RAM**: 64GB DDR4/DDR5 (32GB minimum)
--   **Storage**: 1TB+ NVMe SSD (multiple drives recommended for optimal performance)
--   **GPU**: NVIDIA RTX 3070/4060+ or AMD Radeon RX 6700 XT+ (dedicated GPU recommended for AI workloads)
--   **Network**: Gigabit Ethernet and/or Wi-Fi 6/6E (stable high-speed connection)
--   **OS**: Windows 11 Pro or Pro for Workstations
+- **CPU**: AMD Ryzen 7 5800X+, Intel Core i7-12700K+, or Snapdragon X Elite (ARM64)
+- **RAM**: 64GB DDR4/DDR5 (32GB minimum)
+- **Storage**: 1TB+ NVMe SSD (multiple drives recommended for optimal performance)
+- **GPU**: NVIDIA RTX 3070/4060+ or AMD Radeon RX 6700 XT+ (dedicated GPU recommended for AI workloads)
+- **Network**: Gigabit Ethernet and/or Wi-Fi 6/6E (stable high-speed connection)
+- **OS**: Windows 11 Pro or Pro for Workstations
 
 #### Lightweight Linux Configuration
 
--   **CPU**: Modern x64 processor (Intel Core i3-10100 or AMD Ryzen 3 3100 equivalent)
--   **RAM**: 8GB DDR4 (16GB recommended)
--   **Storage**: 128GB SSD (50GB free space minimum)
--   **GPU**: Integrated graphics (NVIDIA GTX 1650+ for GPU acceleration)
--   **Network**: Broadband internet connection
--   **OS**: Ubuntu 22.04 LTS, Debian 11+, or Alpine Linux 3.15+
+- **CPU**: Modern x64 processor (Intel Core i3-10100 or AMD Ryzen 3 3100 equivalent)
+- **RAM**: 8GB DDR4 (16GB recommended)
+- **Storage**: 128GB SSD (50GB free space minimum)
+- **GPU**: Integrated graphics (NVIDIA GTX 1650+ for GPU acceleration)
+- **Network**: Broadband internet connection
+- **OS**: Ubuntu 22.04 LTS, Debian 11+, or Alpine Linux 3.15+
 
 #### Azure Cloud Resources (Optional)
 
--   Azure Functions (Linux Flex Consumption)
--   Azure Storage (Blob, Table, Queue)
--   Azure AI Services
--   Azure Orchestration (Durable Functions)
+- Azure Functions (Linux Flex Consumption)
+- Azure Storage (Blob, Table, Queue)
+- Azure AI Services
+- Azure Orchestration (Durable Functions)
 
 ### 🔑 Getting Your Claude Sonnet 4.6 API Key
 
 Before installation, you'll need an Anthropic API key to access Claude Sonnet 4.6:
 
 1. **Sign up for Anthropic Console**:
-
     - Visit [console.anthropic.com](https://console.anthropic.com/)
     - Create an account or sign in with your existing account
 
 2. **Verify your account**:
-
     - Complete email verification if required
     - You may need to provide a phone number for verification
 
 3. **Add billing information**:
-
     - Navigate to "Billing" in the console
     - Add a payment method (credit card required)
     - Claude Sonnet 4.6 uses pay-per-use pricing
 
 4. **Generate your API key**:
-
     - Go to "API Keys" in the left sidebar
     - Click "Create Key"
     - Give your key a descriptive name (e.g., "MCP Local Server")
     - Copy the generated key immediately (you won't be able to see it again)
 
 5. **Important notes**:
-
     - **Keep your API key secure**: Never commit it to version control
     - **Monitor usage**: Check your usage in the Anthropic Console regularly
     - **Rate limits**: Be aware of API rate limits for your account tier
@@ -190,7 +185,6 @@ Choose your preferred deployment method:
 #### 🖥️ Local Windows Installation
 
 1. **Prerequisites**:
-
     - Python 3.9 or higher
     - Git for Windows
     - PowerShell 5.1 or higher
@@ -199,8 +193,8 @@ Choose your preferred deployment method:
 2. **Clone and setup**:
 
     ```powershell
-    git clone https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude3-7.git
-    cd tw-mcp-local-server-claude3-7
+    git clone https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude.git
+    cd tw-mcp-local-server-claude
     ```
 
 3. **Create virtual environment**:
@@ -274,8 +268,8 @@ Choose your preferred deployment method:
 2. **Clone and setup**:
 
     ```bash
-    git clone https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude3-7.git
-    cd tw-mcp-local-server-claude3-7
+    git clone https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude.git
+    cd tw-mcp-local-server-claude
     ```
 
 3. **Create virtual environment**:
@@ -336,7 +330,6 @@ Choose your preferred deployment method:
 #### ☁️ Azure Cloud Deployment
 
 1. **Prerequisites**:
-
     - Azure CLI installed and configured
     - Azure subscription with appropriate permissions
     - Docker (for containerized deployment)
@@ -351,8 +344,8 @@ Choose your preferred deployment method:
 3. **Clone and prepare**:
 
     ```bash
-    git clone https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude3-7.git
-    cd tw-mcp-local-server-claude3-7
+    git clone https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude.git
+    cd tw-mcp-local-server-claude
     ```
 
 4. **Option A: Azure Container Instances (Simplest)**:
@@ -407,7 +400,7 @@ Choose your preferred deployment method:
     az webapp deployment source config \
       --resource-group mcp-server-rg \
       --name mcp-server-app \
-      --repo-url https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude3-7 \
+      --repo-url https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude \
       --branch master \
       --manual-integration
     ```
@@ -577,36 +570,36 @@ curl -X POST http://localhost:8000/system/optimize
 
 This server implements a unique "vibe coding" approach that prioritizes:
 
--   **Empathy**: Understanding your needs, frustrations, and emotional context
--   **Reassurance**: Providing confidence and encouragement, especially during challenges
--   **Kindness**: Patient, supportive explanations that never condescend
--   **Understanding**: Grasping broader context, goals, and long-term objectives
--   **Appreciation**: Recognizing the complexity and creativity in programming
--   **Deep-dive reasoning**: Thorough, well-reasoned solutions with clear explanations
--   **Strong logical reasoning**: Clear explanations of the "why" behind recommendations
+- **Empathy**: Understanding your needs, frustrations, and emotional context
+- **Reassurance**: Providing confidence and encouragement, especially during challenges
+- **Kindness**: Patient, supportive explanations that never condescend
+- **Understanding**: Grasping broader context, goals, and long-term objectives
+- **Appreciation**: Recognizing the complexity and creativity in programming
+- **Deep-dive reasoning**: Thorough, well-reasoned solutions with clear explanations
+- **Strong logical reasoning**: Clear explanations of the "why" behind recommendations
 
 ## 🔧 Hybrid Computing Features
 
 ### Intelligent Resource Management
 
--   **Real-time Monitoring**: CPU, memory, disk, and GPU utilization tracking
--   **Adaptive Thresholds**: Windows-optimized performance thresholds
--   **Predictive Analytics**: Task duration and resource requirement estimation
--   **Cost Optimization**: Minimize cloud costs while maintaining performance
+- **Real-time Monitoring**: CPU, memory, disk, and GPU utilization tracking
+- **Adaptive Thresholds**: Windows-optimized performance thresholds
+- **Predictive Analytics**: Task duration and resource requirement estimation
+- **Cost Optimization**: Minimize cloud costs while maintaining performance
 
 ### Local-First Execution
 
--   **Prioritized Local Processing**: Maximum efficiency with your hardware
--   **GPU Acceleration**: Leverage NVIDIA RTX capabilities for visual tasks
--   **Windows Service Integration**: Seamless Windows desktop integration
--   **Resource-Aware Scheduling**: Intelligent task queuing and prioritization
+- **Prioritized Local Processing**: Maximum efficiency with your hardware
+- **GPU Acceleration**: Leverage NVIDIA RTX capabilities for visual tasks
+- **Windows Service Integration**: Seamless Windows desktop integration
+- **Resource-Aware Scheduling**: Intelligent task queuing and prioritization
 
 ### Azure Cloud Integration
 
--   **Serverless Functions**: Linux Flex Consumption for cost-effective scaling
--   **Storage Integration**: Blob, table, and queue operations
--   **AI Services**: Cognitive Services for specialized processing
--   **Orchestration**: Durable Functions for complex workflows
+- **Serverless Functions**: Linux Flex Consumption for cost-effective scaling
+- **Storage Integration**: Blob, table, and queue operations
+- **AI Services**: Cognitive Services for specialized processing
+- **Orchestration**: Durable Functions for complex workflows
 
 ### Empathetic MCP Modules
 
@@ -614,24 +607,24 @@ Each module is designed with empathy and support at its core:
 
 #### 🧠 Ideation & Thoughtcraft
 
--   **Brainstorm**: Mood-aware idea generation with encouraging feedback
--   **Mindmap**: Visual concept mapping with supportive guidance
--   **Perspective Shift**: Gentle reframing with empathetic reasoning
--   **Creativity Surge**: Breakthrough techniques with motivational support
+- **Brainstorm**: Mood-aware idea generation with encouraging feedback
+- **Mindmap**: Visual concept mapping with supportive guidance
+- **Perspective Shift**: Gentle reframing with empathetic reasoning
+- **Creativity Surge**: Breakthrough techniques with motivational support
 
 #### 🎨 Visual & Creative Modules
 
--   **Image Seed**: Emotion-driven visual concepts
--   **Palette Gen**: Brand-aligned color psychology
--   **Motion Branding**: Dynamic brand expression
--   **Vibe Fade**: Ambient emotional transitions
+- **Image Seed**: Emotion-driven visual concepts
+- **Palette Gen**: Brand-aligned color psychology
+- **Motion Branding**: Dynamic brand expression
+- **Vibe Fade**: Ambient emotional transitions
 
 #### 🗣️ Voice & Communication
 
--   **Voice Capture**: Contextual speech recognition
--   **Intent Echo**: Emotional tone analysis
--   **Speech Craft**: Natural response generation
--   **Command Stream**: Voice-controlled workflows
+- **Voice Capture**: Contextual speech recognition
+- **Intent Echo**: Emotional tone analysis
+- **Speech Craft**: Natural response generation
+- **Command Stream**: Voice-controlled workflows
 
 ## 🔧 Usage
 
@@ -664,12 +657,12 @@ mcp-server plugins
 
 The server provides several REST API endpoints:
 
--   `POST /complete` - Basic text completion
--   `POST /vibe-code` - Vibe coding assistance
--   `POST /chat` - Multi-turn conversations
--   `POST /analyze-code` - Code analysis and improvement
--   `GET /health` - Health check
--   `GET /plugins` - List available plugins
+- `POST /complete` - Basic text completion
+- `POST /vibe-code` - Vibe coding assistance
+- `POST /chat` - Multi-turn conversations
+- `POST /analyze-code` - Code analysis and improvement
+- `GET /health` - Health check
+- `GET /plugins` - List available plugins
 
 ### Example API Usage
 
@@ -721,9 +714,9 @@ class MyPlugin(PluginInterface):
 
 ### Built-in Plugins
 
--   **Vibe Coder**: Empathetic programming assistance
--   **Code Analyzer**: Code review and improvement suggestions
--   **Documentation Generator**: Automatic documentation generation
+- **Vibe Coder**: Empathetic programming assistance
+- **Code Analyzer**: Code review and improvement suggestions
+- **Documentation Generator**: Automatic documentation generation
 
 ## ⚙️ Configuration
 
@@ -823,41 +816,41 @@ CMD ["mcp-server", "run", "--host", "0.0.0.0"]
 
 ### Resource Monitoring
 
--   **Real-time Metrics**: CPU, memory, disk, GPU utilization
--   **Historical Analysis**: Performance trends and patterns
--   **Threshold Alerts**: Proactive resource management
--   **Cost Tracking**: Azure usage and cost optimization
+- **Real-time Metrics**: CPU, memory, disk, GPU utilization
+- **Historical Analysis**: Performance trends and patterns
+- **Threshold Alerts**: Proactive resource management
+- **Cost Tracking**: Azure usage and cost optimization
 
 ### System Health
 
--   **Health Endpoints**: `/health`, `/system/status`
--   **Plugin Status**: Individual module health checks
--   **Azure Integration**: Service availability and latency
--   **Performance Metrics**: Response times and throughput
+- **Health Endpoints**: `/health`, `/system/status`
+- **Plugin Status**: Individual module health checks
+- **Azure Integration**: Service availability and latency
+- **Performance Metrics**: Response times and throughput
 
 ## 🔐 Security & Privacy
 
 ### Local Security
 
--   **Rate Limiting**: Configurable request throttling
--   **CORS Protection**: Cross-origin request management
--   **Input Validation**: Comprehensive request sanitization
--   **Secure Defaults**: Production-ready security configuration
+- **Rate Limiting**: Configurable request throttling
+- **CORS Protection**: Cross-origin request management
+- **Input Validation**: Comprehensive request sanitization
+- **Secure Defaults**: Production-ready security configuration
 
 ### Azure Security
 
--   **OAuth2 Integration**: Secure cloud authentication
--   **Managed Identity**: Passwordless Azure access
--   **Network Security**: VPC and firewall configuration
--   **Audit Logging**: Comprehensive security monitoring
+- **OAuth2 Integration**: Secure cloud authentication
+- **Managed Identity**: Passwordless Azure access
+- **Network Security**: VPC and firewall configuration
+- **Audit Logging**: Comprehensive security monitoring
 
 ## 📚 Documentation
 
--   **[Hybrid Configuration Guide](HYBRID_CONFIGURATION.md)**: Complete setup and configuration
--   **[API Documentation](docs/api.md)**: Comprehensive API reference
--   **[Plugin Development](docs/plugins.md)**: Creating custom MCP modules
--   **[Azure Integration](docs/azure.md)**: Cloud deployment guide
--   **[Windows Service](docs/windows.md)**: Desktop service setup
+- **[Hybrid Configuration Guide](HYBRID_CONFIGURATION.md)**: Complete setup and configuration
+- **[API Documentation](docs/api.md)**: Comprehensive API reference
+- **[Plugin Development](docs/plugins.md)**: Creating custom MCP modules
+- **[Azure Integration](docs/azure.md)**: Cloud deployment guide
+- **[Windows Service](docs/windows.md)**: Desktop service setup
 
 ## 🧪 Testing & Validation
 
@@ -894,8 +887,8 @@ curl localhost:8000/system/status
 
 ```bash
 # Clone and setup
-git clone https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude3-7.git
-cd tw-mcp-local-server-claude3-7
+git clone https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude.git
+cd tw-mcp-local-server-claude
 pip install -e ".[dev]"
 
 # Run tests
@@ -929,12 +922,12 @@ class MyPlugin(PluginInterface):
 
 ## 🛡️ Security Features
 
--   **Rate Limiting**: Configurable request rate limiting
--   **CORS Protection**: Configurable CORS origins
--   **Input Validation**: Pydantic-based request validation
--   **Error Handling**: Comprehensive error handling and logging
--   **API Key Security**: Secure API key management
--   **Azure Security**: OAuth2 and managed identity integration
+- **Rate Limiting**: Configurable request rate limiting
+- **CORS Protection**: Configurable CORS origins
+- **Input Validation**: Pydantic-based request validation
+- **Error Handling**: Comprehensive error handling and logging
+- **API Key Security**: Secure API key management
+- **Azure Security**: OAuth2 and managed identity integration
 
 ## 📝 Logging & Monitoring
 
@@ -954,26 +947,26 @@ logger.info("Supporting user through creative challenge",
 
 ### Azure Functions
 
--   **Ideation Functions**: Brainstorming and mindmapping
--   **Visual Functions**: Image and animation generation
--   **Audio Functions**: Music and voice processing
--   **Orchestration**: Complex workflow management
+- **Ideation Functions**: Brainstorming and mindmapping
+- **Visual Functions**: Image and animation generation
+- **Audio Functions**: Music and voice processing
+- **Orchestration**: Complex workflow management
 
 ### Cost Optimization
 
--   **Local-First**: Zero cloud costs for local execution
--   **Intelligent Routing**: Cost-aware task placement
--   **Usage Monitoring**: Real-time cost tracking
--   **Budget Controls**: Configurable spending limits
+- **Local-First**: Zero cloud costs for local execution
+- **Intelligent Routing**: Cost-aware task placement
+- **Usage Monitoring**: Real-time cost tracking
+- **Budget Controls**: Configurable spending limits
 
 ## 📚 Examples
 
 The `examples/` directory contains:
 
--   `vibe_coding_example.py`: Complete vibe coding demonstration
--   `sample_mcp_config.py`: Plugin configuration examples
--   `usage_examples.json`: API usage examples
--   `custom_plugin_template.py`: Template for creating custom plugins
+- `vibe_coding_example.py`: Complete vibe coding demonstration
+- `sample_mcp_config.py`: Plugin configuration examples
+- `usage_examples.json`: API usage examples
+- `custom_plugin_template.py`: Template for creating custom plugins
 
 Run the vibe coding example:
 
@@ -1038,11 +1031,11 @@ CORS_ORIGINS=["https://yourdomain.com"]
 
 ## 🛡️ Security Features
 
--   **Rate Limiting**: Configurable request rate limiting
--   **CORS Protection**: Configurable CORS origins
--   **Input Validation**: Pydantic-based request validation
--   **Error Handling**: Comprehensive error handling and logging
--   **API Key Security**: Secure API key management
+- **Rate Limiting**: Configurable request rate limiting
+- **CORS Protection**: Configurable CORS origins
+- **Input Validation**: Pydantic-based request validation
+- **Error Handling**: Comprehensive error handling and logging
+- **API Key Security**: Secure API key management
 
 ## 📝 Logging
 
@@ -1070,9 +1063,9 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ## 🙏 Acknowledgments
 
--   **Anthropic** for the Claude API
--   **FastAPI** for the excellent web framework
--   **The Python Community** for amazing libraries and tools
+- **Anthropic** for the Claude API
+- **FastAPI** for the excellent web framework
+- **The Python Community** for amazing libraries and tools
 
 ## 📞 Support
 
