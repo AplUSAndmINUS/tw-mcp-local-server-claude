@@ -94,10 +94,28 @@ class PluginRegistry:
             logger.error(f"Could not load plugin spec for {plugin_file}")
             return
         
+        # Register the module in sys.modules before execution to support
+        # relative imports within the plugin,
+        prev_module = sys.modules.get(module_name)
         module = importlib.util.module_from_spec(spec)
         module.__package__ = __name__
         sys.modules[module_name] = module
         spec.loader.exec_module(module)
+        
+        # Register module in sys.modules before execution for relative imports,
+        # but avoid clobbering an existing entry and clean up on failure.
+        if prev_module is not None:
+            sys.modules[module_name] = prev_module
+        try:
+            spec.loader.exec_module(module)
+        except Exception as e:
+            # Restore or remove sys.modules entry on failure to avoid leaving
+            # a partially-initialized module in sys.modules that's registered under the plugin name.
+            if prev_module is None:
+                sys.modules.pop(module_name, None)
+            else:
+                sys.modules[module_name] = prev_module
+            raise e
         
         # Find plugin classes
         for name, obj in inspect.getmembers(module):
