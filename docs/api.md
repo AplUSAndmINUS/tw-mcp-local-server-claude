@@ -24,7 +24,7 @@ All API responses follow this general structure:
     "output_tokens": 456,
     "total_tokens": 579
   },
-  "model": "claude-3-sonnet-20240229",
+  "model": "claude-sonnet-4-6",
   "role": "assistant",
   "stop_reason": "end_turn"
 }
@@ -79,7 +79,7 @@ Generate text completions using Claude.
     "output_tokens": 150,
     "total_tokens": 175
   },
-  "model": "claude-3-sonnet-20240229",
+  "model": "claude-sonnet-4-6",
   "role": "assistant",
   "stop_reason": "end_turn"
 }
@@ -124,7 +124,7 @@ Get empathetic, thoughtful programming assistance.
     "output_tokens": 300,
     "total_tokens": 330
   },
-  "model": "claude-3-sonnet-20240229",
+  "model": "claude-sonnet-4-6",
   "role": "assistant",
   "stop_reason": "end_turn"
 }
@@ -164,7 +164,7 @@ Have multi-turn conversations with Claude.
     "output_tokens": 200,
     "total_tokens": 245
   },
-  "model": "claude-3-sonnet-20240229",
+  "model": "claude-sonnet-4-6",
   "role": "assistant",
   "stop_reason": "end_turn"
 }
@@ -202,7 +202,7 @@ Analyze and improve code with Claude.
     "output_tokens": 250,
     "total_tokens": 300
   },
-  "model": "claude-3-sonnet-20240229",
+  "model": "claude-sonnet-4-6",
   "role": "assistant",
   "stop_reason": "end_turn"
 }
@@ -241,7 +241,7 @@ Get current server configuration (excluding sensitive data).
   "host": "localhost",
   "port": 8000,
   "debug": false,
-  "claude_model": "claude-3-sonnet-20240229",
+  "claude_model": "claude-sonnet-4-6",
   "max_tokens": 4096,
   "temperature": 0.7,
   "enabled_plugins": ["vibe_coder"],

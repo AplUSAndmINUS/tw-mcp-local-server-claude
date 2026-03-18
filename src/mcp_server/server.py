@@ -2,7 +2,7 @@
 Main MCP Server Implementation
 =============================
 
-FastAPI-based server with Claude Sonnet 3.7 integration and plugin support.
+FastAPI-based server with Claude Sonnet 4.6 integration and plugin support.
 """
 
 import asyncio
@@ -153,8 +153,8 @@ class MCPServer:
             logger.info("MCP Server shutdown complete")
         
         app = FastAPI(
-            title="TW MCP Local Server - Claude 3.7",
-            description="Python MCP server with Claude Sonnet 3.7 integration",
+            title="TW MCP Local Server - Claude 4.6",
+            description="Python MCP server with Claude Sonnet 4.6 integration",
             version="0.1.0",
             docs_url="/docs" if self.settings.debug else None,
             redoc_url="/redoc" if self.settings.debug else None,

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tw-mcp-local-server-claude3-7"
 version = "0.1.0"
-description = "A Python MCP server implementation with Claude Sonnet 3.7 integration for local and cloud deployment"
+description = "A Python MCP server implementation with Claude Sonnet 4.6 and Opus 4.6 integration for local and cloud deployment"
 readme = "README.md"
 license = {text = "GPL-3.0"}
 authors = [

@@ -20,7 +20,7 @@ from .config import Settings, load_settings, create_default_config_file
 from .server import MCPServer
 from .claude_client import ClaudeClient
 
-app = typer.Typer(help="TW MCP Local Server - Claude 3.7 Integration")
+app = typer.Typer(help="TW MCP Local Server - Claude 4.6 Integration")
 console = Console()
 
 
