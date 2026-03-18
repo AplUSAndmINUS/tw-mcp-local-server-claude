@@ -10,6 +10,8 @@ import asyncio
 from unittest.mock import Mock, patch
 import json
 
+from pydantic import ValidationError
+
 from mcp_server.config import Settings
 from mcp_server.claude_client import ClaudeClient, ClaudeResponse
 from mcp_server.server import MCPServer
@@ -21,25 +23,38 @@ class TestSettings:
     
     def test_default_settings(self):
         """Test default settings creation."""
-        with patch.dict('os.environ', {'ANTHROPIC_API_KEY': 'test-key'}):
+        with patch.dict('os.environ', {'ANTHROPIC_API_KEY': 'test-key', 'CLAUDE_MODEL': 'claude-sonnet-4-6'}):
             settings = Settings()
             assert settings.host == "localhost"
             assert settings.port == 8000
             assert settings.anthropic_api_key == "test-key"
-            assert settings.claude_model == "claude-3-sonnet-20240229"
+            assert settings.claude_model == "claude-sonnet-4-6"
     
-    def test_settings_validation(self):
-        """Test settings validation."""
-        with patch.dict('os.environ', {'ANTHROPIC_API_KEY': 'test-key'}):
+    def test_supported_models(self):
+        """Test that new Sonnet 4.6 and Opus 4.6 models are supported."""
+        with patch.dict('os.environ', {'ANTHROPIC_API_KEY': 'test-key', 'CLAUDE_MODEL': 'claude-sonnet-4-6'}):
             settings = Settings()
-            
-            # Test temperature validation
-            with pytest.raises(ValueError):
-                settings.temperature = 2.0
-            
-            # Test max_tokens validation
-            with pytest.raises(ValueError):
-                settings.max_tokens = 0
+            assert settings.claude_model == "claude-sonnet-4-6"
+
+        with patch.dict('os.environ', {'ANTHROPIC_API_KEY': 'test-key', 'CLAUDE_MODEL': 'claude-opus-4-6'}):
+            settings = Settings()
+            assert settings.claude_model == "claude-opus-4-6"
+
+    def test_unsupported_model_raises(self):
+        """Test that an unsupported model raises a validation error."""
+        with pytest.raises(ValidationError):
+            with patch.dict('os.environ', {'ANTHROPIC_API_KEY': 'test-key', 'CLAUDE_MODEL': 'claude-unknown-99'}):
+                Settings()
+
+    def test_settings_validation(self):
+        with patch.dict('os.environ', {'ANTHROPIC_API_KEY': 'test-key'}):
+            # Test temperature validation via model creation
+            with pytest.raises(ValidationError):
+                Settings(temperature=2.0)
+
+            # Test max_tokens validation via model creation
+            with pytest.raises(ValidationError):
+                Settings(max_tokens=0)
 
 
 class TestClaudeClient:
@@ -60,7 +75,7 @@ class TestClaudeClient:
             mock_response = Mock()
             mock_response.content = [Mock(text="Hello, world!")]
             mock_response.usage = Mock(input_tokens=10, output_tokens=20, total_tokens=30)
-            mock_response.model = "claude-3-sonnet-20240229"
+            mock_response.model = "claude-sonnet-4-6"
             mock_response.stop_reason = "end_turn"
             mock_create.return_value = mock_response
             
@@ -68,7 +83,7 @@ class TestClaudeClient:
             
             assert isinstance(response, ClaudeResponse)
             assert response.content == "Hello, world!"
-            assert response.model == "claude-3-sonnet-20240229"
+            assert response.model == "claude-sonnet-4-6"
     
     @pytest.mark.asyncio
     async def test_vibe_code_mock(self, client):
@@ -78,7 +93,7 @@ class TestClaudeClient:
             mock_response = Mock()
             mock_response.content = [Mock(text="I understand your frustration...")]
             mock_response.usage = Mock(input_tokens=25, output_tokens=100, total_tokens=125)
-            mock_response.model = "claude-3-sonnet-20240229"
+            mock_response.model = "claude-sonnet-4-6"
             mock_response.stop_reason = "end_turn"
             mock_create.return_value = mock_response
             
@@ -140,7 +155,7 @@ class TestVibeCoderPlugin:
         mock_response = ClaudeResponse(
             content="Here are some suggestions:\n- Use functions\n- Add comments\n- Test your code",
             usage={"total_tokens": 50},
-            model="claude-3-sonnet-20240229"
+            model="claude-sonnet-4-6"
         )
         
         from mcp_server.plugins.vibe_coder import VibeRequest

@@ -1,13 +1,13 @@
 """
-TW MCP Local Server - Claude 3.7 Integration
+TW MCP Local Server - Claude 4.6 Integration
 ============================================
 
-A Python MCP (Model Context Protocol) server implementation with Claude Sonnet 3.7 
-integration for local and cloud deployment.
+A Python MCP (Model Context Protocol) server implementation with Claude Sonnet 4.6
+and Claude Opus 4.6 integration for local and cloud deployment.
 
 Features:
 - FastAPI-based server with async/await support
-- Claude Sonnet 3.7 API integration via Anthropic SDK
+- Claude Sonnet 4.6 and Claude Opus 4.6 API integration via Anthropic SDK
 - Plugin system for extensible functionality
 - Local and cloud deployment options
 - Configuration management

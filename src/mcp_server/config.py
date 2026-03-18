@@ -9,8 +9,23 @@ import os
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 
-from pydantic import Field, field_validator
+from pydantic import ConfigDict, Field, field_validator
 from pydantic_settings import BaseSettings
+
+
+# Supported Claude models
+SUPPORTED_CLAUDE_MODELS: List[str] = [
+    "claude-sonnet-4-6",
+    "claude-opus-4-6",
+    "claude-sonnet-4-5",
+    "claude-opus-4-5",
+    "claude-3-7-sonnet-20250219",
+    "claude-3-5-sonnet-20241022",
+    "claude-3-5-haiku-20241022",
+    "claude-3-opus-20240229",
+    "claude-3-sonnet-20240229",
+    "claude-3-haiku-20240307",
+]
 
 
 class Settings(BaseSettings):
@@ -24,7 +39,7 @@ class Settings(BaseSettings):
     
     # Claude API Configuration
     anthropic_api_key: str = Field(description="Anthropic API key for Claude")
-    claude_model: str = Field(default="claude-3-sonnet-20240229", description="Claude model to use")
+    claude_model: str = Field(default="claude-sonnet-4-6", description="Claude model to use")
     max_tokens: int = Field(default=4096, description="Maximum tokens for Claude responses")
     temperature: float = Field(default=0.7, description="Temperature for Claude responses")
     
@@ -97,11 +112,12 @@ class Settings(BaseSettings):
     mcp_writing_enabled: bool = Field(default=True, description="Enable writing modules")
     mcp_testing_enabled: bool = Field(default=True, description="Enable testing modules")
     
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
-        case_sensitive = False
-        
+    model_config = ConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        case_sensitive=False,
+    )
+
     @field_validator("anthropic_api_key")
     @classmethod
     def validate_api_key(cls, v):
@@ -109,6 +125,14 @@ class Settings(BaseSettings):
             raise ValueError("Anthropic API key must be provided")
         return v
     
+    @field_validator("claude_model")
+    @classmethod
+    def validate_claude_model(cls, v):
+        if v not in SUPPORTED_CLAUDE_MODELS:
+            supported_models_str = ", ".join(SUPPORTED_CLAUDE_MODELS)
+            raise ValueError(f"Claude model must be one of {supported_models_str}")
+        return v
+
     @field_validator("log_level")
     @classmethod
     def validate_log_level(cls, v):
@@ -167,7 +191,7 @@ RELOAD=false
 
 # Claude API Configuration
 ANTHROPIC_API_KEY=your-anthropic-api-key-here
-CLAUDE_MODEL=claude-3-sonnet-20240229
+CLAUDE_MODEL=claude-sonnet-4-6
 MAX_TOKENS=4096
 TEMPERATURE=0.7
 

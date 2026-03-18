@@ -81,7 +81,7 @@ DEBUG=false
 LOG_LEVEL=INFO
 
 # Claude Settings
-CLAUDE_MODEL=claude-3-sonnet-20240229
+CLAUDE_MODEL=claude-sonnet-4-6
 MAX_TOKENS=4096
 TEMPERATURE=0.7
 
@@ -110,7 +110,7 @@ server:
 
 claude:
   api_key: ${ANTHROPIC_API_KEY}
-  model: claude-3-sonnet-20240229
+  model: claude-sonnet-4-6
   max_tokens: 4096
   temperature: 0.7
   timeout: 30

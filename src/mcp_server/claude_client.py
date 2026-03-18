@@ -2,7 +2,8 @@
 Claude API Client
 ================
 
-Handles communication with Claude Sonnet 3.7 via the Anthropic API.
+Handles communication with Claude via the Anthropic API.
+Supports Claude Sonnet 4.6, Claude Opus 4.6, and earlier Claude models.
 """
 
 import asyncio
@@ -31,7 +32,8 @@ class ClaudeResponse(BaseModel):
 
 class ClaudeClient:
     """
-    Client for interacting with Claude Sonnet 3.7 via the Anthropic API.
+    Client for interacting with Claude via the Anthropic API.
+    Supports Claude Sonnet 4.6, Claude Opus 4.6, and earlier Claude models.
     
     Supports both streaming and non-streaming responses, with built-in
     error handling and retry logic.

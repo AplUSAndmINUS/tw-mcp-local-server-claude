@@ -52,7 +52,7 @@ plugin_config = {
         }
     },
     "claude": {
-        "model": "claude-3-sonnet-20240229",
+        "model": "claude-sonnet-4-6",
         "max_tokens": 4096,
         "temperature": 0.7,
         "system_prompts": {

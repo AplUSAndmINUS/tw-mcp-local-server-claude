@@ -1,6 +1,6 @@
-# TW MCP Local Server - Claude 3.7 with Hybrid Cloud Computing
+# TW MCP Local Server - Claude 4.6 with Hybrid Cloud Computing
 
-A comprehensive Python MCP (Model Context Protocol) server implementation with Claude Sonnet 3.7 integration, featuring **hybrid cloud computing** that prioritizes local execution while seamlessly integrating with Azure cloud resources for resource-intensive tasks.
+A comprehensive Python MCP (Model Context Protocol) server implementation with Claude Sonnet 4.6 integration, featuring **hybrid cloud computing** that prioritizes local execution while seamlessly integrating with Azure cloud resources for resource-intensive tasks.
 
 ## 🌟 Key Features
 
@@ -144,9 +144,9 @@ A comprehensive Python MCP (Model Context Protocol) server implementation with C
 -   Azure AI Services
 -   Azure Orchestration (Durable Functions)
 
-### 🔑 Getting Your Claude 3.7 Sonnet API Key
+### 🔑 Getting Your Claude Sonnet 4.6 API Key
 
-Before installation, you'll need an Anthropic API key to access Claude 3.7 Sonnet:
+Before installation, you'll need an Anthropic API key to access Claude Sonnet 4.6:
 
 1. **Sign up for Anthropic Console**:
 
@@ -162,7 +162,7 @@ Before installation, you'll need an Anthropic API key to access Claude 3.7 Sonne
 
     - Navigate to "Billing" in the console
     - Add a payment method (credit card required)
-    - Claude 3.7 Sonnet uses pay-per-use pricing
+    - Claude Sonnet 4.6 uses pay-per-use pricing
 
 4. **Generate your API key**:
 
@@ -176,7 +176,7 @@ Before installation, you'll need an Anthropic API key to access Claude 3.7 Sonne
     - **Keep your API key secure**: Never commit it to version control
     - **Monitor usage**: Check your usage in the Anthropic Console regularly
     - **Rate limits**: Be aware of API rate limits for your account tier
-    - **Pricing**: Claude 3.7 Sonnet pricing is based on input/output tokens
+    - **Pricing**: Claude Sonnet 4.6 pricing is based on input/output tokens
 
 6. **Pricing reference** (as of July 2025):
     - Input tokens: ~$3.00 per million tokens
@@ -737,7 +737,7 @@ DEBUG=false
 
 # Claude API Configuration
 ANTHROPIC_API_KEY=your-api-key-here
-CLAUDE_MODEL=claude-3-sonnet-20240229
+CLAUDE_MODEL=claude-sonnet-4-6
 MAX_TOKENS=4096
 TEMPERATURE=0.7
 

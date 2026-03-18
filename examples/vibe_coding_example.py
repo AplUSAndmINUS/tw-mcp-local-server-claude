@@ -2,7 +2,7 @@
 Example Vibe Coding MCP Plugin
 ==============================
 
-This example demonstrates the vibe coding approach with Claude Sonnet 3.7,
+This example demonstrates the vibe coding approach with Claude Sonnet 4.6,
 focusing on empathy, understanding, and thoughtful programming assistance.
 """
 
@@ -149,7 +149,7 @@ class VibeCodeExample:
     
     async def run_full_demo(self):
         """Run the complete vibe coding demonstration."""
-        print("🚀 Vibe Coding with Claude Sonnet 3.7")
+        print("🚀 Vibe Coding with Claude Sonnet 4.6")
         print("Demonstrating empathy, reassurance, kindness, understanding,")
         print("appreciation, deep-dive modeling, and strong reasoning")
         print("=" * 70)
