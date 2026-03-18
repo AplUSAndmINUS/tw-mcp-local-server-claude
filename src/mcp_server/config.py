@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 
-from pydantic import Field, field_validator
+from pydantic import ConfigDict, Field, field_validator
 from pydantic_settings import BaseSettings
 
 
@@ -112,10 +112,11 @@ class Settings(BaseSettings):
     mcp_writing_enabled: bool = Field(default=True, description="Enable writing modules")
     mcp_testing_enabled: bool = Field(default=True, description="Enable testing modules")
     
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
-        case_sensitive = False
+    model_config = ConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        case_sensitive=False,
+    )
 
     @field_validator("anthropic_api_key")
     @classmethod
@@ -128,7 +129,8 @@ class Settings(BaseSettings):
     @classmethod
     def validate_claude_model(cls, v):
         if v not in SUPPORTED_CLAUDE_MODELS:
-            raise ValueError(f"Claude model must be one of {SUPPORTED_CLAUDE_MODELS}")
+            supported_models_str = ", ".join(SUPPORTED_CLAUDE_MODELS)
+            raise ValueError(f"Claude model must be one of {supported_models_str}")
         return v
 
     @field_validator("log_level")

@@ -101,7 +101,7 @@ if %errorlevel% == 0 (
     echo Installing with NSSM...
     nssm install MCPServer python "%cd%\\scripts\\service.py"
     nssm set MCPServer AppDirectory "%cd%"
-    nssm set MCPServer DisplayName "MCP Server - Claude 3.7"
+    nssm set MCPServer DisplayName "MCP Server - Claude Sonnet 4.6"
     nssm set MCPServer Description "Python MCP server with Claude Sonnet 4.6 integration"
     nssm start MCPServer
     echo Service installed and started
@@ -142,8 +142,8 @@ param(
 )
 
 $ServiceName = "MCPServer"
-$ServiceDisplayName = "MCP Server - Claude 3.7"
-$ServiceDescription = "Python MCP server with Claude Sonnet 4.6 integration"
+$ServiceDisplayName = "MCP Server"
+$ServiceDescription = "Python MCP server"
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 $PythonScript = Join-Path $ProjectRoot "scripts\\service.py"
 

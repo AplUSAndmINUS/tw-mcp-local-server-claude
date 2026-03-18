@@ -23,7 +23,7 @@ class TestSettings:
     
     def test_default_settings(self):
         """Test default settings creation."""
-        with patch.dict('os.environ', {'ANTHROPIC_API_KEY': 'test-key'}):
+        with patch.dict('os.environ', {'ANTHROPIC_API_KEY': 'test-key', 'CLAUDE_MODEL': 'claude-sonnet-4-6'}):
             settings = Settings()
             assert settings.host == "localhost"
             assert settings.port == 8000
@@ -48,15 +48,13 @@ class TestSettings:
 
     def test_settings_validation(self):
         with patch.dict('os.environ', {'ANTHROPIC_API_KEY': 'test-key'}):
-            settings = Settings()
-            
-            # Test temperature validation
-            with pytest.raises(ValueError):
-                settings.temperature = 2.0
-            
-            # Test max_tokens validation
-            with pytest.raises(ValueError):
-                settings.max_tokens = 0
+            # Test temperature validation via model creation
+            with pytest.raises(ValidationError):
+                Settings(temperature=2.0)
+
+            # Test max_tokens validation via model creation
+            with pytest.raises(ValidationError):
+                Settings(max_tokens=0)
 
 
 class TestClaudeClient:

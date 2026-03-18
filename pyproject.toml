@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tw-mcp-local-server-claude3-7"
+name = "tw-mcp-local-server-claude"
 version = "0.1.0"
 description = "A Python MCP server implementation with Claude Sonnet 4.6 and Opus 4.6 integration for local and cloud deployment"
 readme = "README.md"
@@ -64,9 +64,9 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude3-7"
-Repository = "https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude3-7"
-Issues = "https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude3-7/issues"
+Homepage = "https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude"
+Repository = "https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude"
+Issues = "https://github.com/AplUSAndmINUS/tw-mcp-local-server-claude/issues"
 
 [project.scripts]
 mcp-server = "mcp_server.cli:main"
