@@ -201,10 +201,11 @@ GPU_ENABLED=false
 MAX_LOCAL_MEMORY=8192
 
 # Plugin Configuration
-PLUGINS_DIRECTORY=plugins
-ENABLED_PLUGINS=["vibe_coder"]
+PLUGINS_DIRECTORY=src/mcp_server/plugins
+ENABLED_PLUGINS=["vibe_coder", "brainstorm", "creativity_surge", "mindmap", "perspective_shift"]
 
 # Security Configuration
+# Generate with: python -c "import secrets; print(secrets.token_hex(32))"
 SECRET_KEY=your-secret-key-change-this-in-production
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 
